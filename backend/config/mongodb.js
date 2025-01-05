@@ -9,9 +9,7 @@ const connectDB = async () => {
     });
 
     try {
-        await mongoose.connect(`${process.env.MONGODB_URL}fashion-store`, {
-            authSource: 'admin'
-        });
+        await mongoose.connect(`${process.env.MONGODB_URL}fashion-store`);
     } catch (error) {
         console.error('Connection error: ', error);
     }
